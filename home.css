@@ -1,0 +1,467 @@
+body, h1, h2, h3, h4, br, p, ul, li, a, header, footer, article, tr, th, table, nav, img { /* reset */
+	padding: 0;
+	margin: 0;
+	font-family: "Arial Verdana", Verdana, Sans-serif; /* sets default font */
+}
+
+body {
+
+}
+
+p { /* universal font size */
+	font-size: 15px;
+}
+
+.container {
+	margin: 25px; /* The margin is the spacing between elements, this gives it 25px spacing between each element for example */
+	background-color: #FDFBE9; /* This adds colour to the background of the element */
+	box-shadow: 0 0 10px black; /* This adds shadow to the element, the parameter goes as the positions, height then verticle, then the distance, then the colour, for this example, it is 0 verticle and horizontal position (centre), and 10px distance, with colour b lack */
+	position: absolute; /* Position offers the type of positioning method, for this example, I used absolute, which gives it a specific position, relative to its ancestor */
+	left: 0.1%; /* These are values for the position, for this example, left side is place 0.1% of the width of the screen */
+	right: 0.1%;
+	top: 0.1%;
+	bottom: auto; /* I left these as auto, as it the amount of content will affect the height. I would like to make it so there's a scroll */
+}
+
+
+header {
+	line-height: 54px;/* This gives height to the line */
+	height: 9em; /* This defines the height of the element */
+	margin-left: 0;
+	margin-bottom: 20px; /* Margin is the spacing outside the element, for this example, there is a 100px space between this element and the one below it */
+	border-bottom-left-radius: 30px; /* This makes the corners of the border rounded */
+	border-bottom-right-radius: 30px; /* The value is the radius */
+	background: white;
+	box-shadow: 0 0 5px black;
+	overflow: hidden; /* This property decides what happens if the content 'overflows' the element box, the value for this is hidden, which hides the content */
+}
+
+header img {
+	width: 100%; /* % on the width and height is compared to the size of the parent element, 100% would mean the whole box */
+	height: 100%;
+	position: relative; /* Relative positions it so it is relative to its original position */
+}
+
+header h1 {
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	top: 0; /* this places it 0 distance from the line height */
+}
+
+header a {
+	padding-left: 15px; /* Padding property gives space around the content */
+	padding-right: 15px; /* for example, this value gives 15px away from from the right edge */
+	padding-top: 5px;
+	padding-bottom: 5px;
+	box-shadow: 0 0 5px black;
+	text-decoration: none; /* By default, the a tag is a link, so it is underline, this property allows me to decorate the text, removing the underline */
+	color: white;
+	animation: fadeText 3s; /* animation can give many values, for this one, it enables the fadeText animation, within a space of 3 seconds */ 
+	border: 1px solid black; /* this property allows you to give property to the borders, the parameters for this example is the width, then style, the colour */
+	background-color: #151515;
+}
+
+@keyframes fadeText{ /* intro for name at the top */
+	0% { color: #151515;} /* Starts(0%) in black */
+	100% {color: white;} /* Ends(100%) in white */
+}
+
+
+/* gives colour to indicate of which site you're currently on, I gave the each page a class for its current page */
+.currentPage {
+	background-color: #FDFBE9;
+}
+
+
+nav {
+	float: left; /* Property decides whether the element should float or not, where text or other inline elements wrap around it */
+	width: 300px;
+	margin-left: 10px;
+	margin-top: 20px;
+	margin-bottom: 100px;
+	box-shadow: 0 0 5px black;
+	border-right: 2px solid black; /* This property gives the element a border around it, the parameter goes as size, style, colour, for this example, I chose a 2px width, solid, black border, on the right of the element */
+	position: relative;
+	top: 30px;
+	bottom: 30px;
+}
+
+nav a{
+	font-size: 16px;
+	text-decoration: none;
+	color: black;
+	display: block; /* allows whole block of li to be clickable */
+	padding-left: 15px;
+}
+
+nav ul li ul {
+	border: none; /* Had to set this property, as 'nav ul' selector gave also the child(this one) a border */
+	background-color: #ADD8E6; /* sets background color to blue, otherwise it'll be white from nav ul selector */
+}
+
+nav ul { /* selector for the whole list */
+	border-left: 2px solid #2a2a2a;
+	border-top: 2px solid #2a2a2a;
+	border-bottom: 2px solid #2a2a2a;
+	background-color: #FDFBE9;
+}
+
+nav li{
+	list-style-type: none; /* List style type allows you to change the appearance of the list item marker, for this, I set it to none. */
+	height: 37px;
+	line-height: 37px;
+	margin: 5px;
+	border-left: 5px solid #2a2a2a;
+	border-bottom: 1px solid #2a2a2a;
+	border-top: 1px solid #2a2a2a;
+	border-right: 1px solid #2a2a2a;
+	box-shadow: 0 0 5px black; /* shadow across all sides */
+	background-color: #ADD8E6;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	-ms-transition: all 0.25s; /* had to add this for IE 8, as it doesn't support transitions */
+	-moz-transition: all 0.25s; /* firefox */
+	-o-transition: all 0.25s; /* opera */
+	-webkit-transition: all 0.25s; /* chrome */
+}
+
+
+nav ul .units{ /* specifically for the #units li */
+	height: 200px; 
+	line-height: 30px;
+}
+
+nav ul li ul li { /* selector for sub list */
+	line-height: 33px; /* allows text to be centred, by having it the same as the height */
+	height: 33px;
+	border-left: 10px solid #2a2a2a;
+	border-bottom: 1px solid #2a2a2a;
+	border-top: 1px solid #2a2a2a;
+	border-right: none;
+	padding: 0;
+	box-shadow: none; /* no shadows on the sub list, as the parent there are shadows on the parent */
+	background-color: #9BC2CF;
+	margin-right: 0;
+	-ms-transition: all 0.20s;
+	-moz-transition: all 0.20s; /* allow smooth transition - firefox */
+	-o-transition: all 0.20s; /* allow smooth transition - opera */
+	-webkit-transition: all 0.20s; /* allow smooth transition - chrome */
+}
+
+nav ul li ul li a{
+    margin-left: 0;
+	height: 33px; /* allows whole list to be clickable */
+}
+
+
+nav ul li ul li:hover{
+	background: #CDE7F0; /* changes colour, and width increases(or margin becomes 0) when hovered */
+	margin-left: 0;
+}
+
+nav ul li:hover {
+	background: #CDE7F0; 
+    margin-left: 0;
+}
+
+nav ul li ul:hover {
+	background: #CDE7F0;
+    margin-left: 0;
+}
+
+nav ul .units:active{ /* makes it look static, otherwise 'nav ul li:active' selector changes colour */
+	background: #CDE7f0;
+}
+
+nav ul li #units:active { /* makes it so that "units" does not change when clicked on, as it is not a link */
+	background: #CDE7f0;
+}
+
+nav ul li a:active{ /* active selector is when the mouse is pressed and held on the element */
+	background: #72BCD4;
+}
+
+nav ul li ul li a:active{
+	background: #72BCD4;
+}
+
+a:focus { /* For when an element is selected (usually using a keyboard tab key) */
+	text-shadow: 0 0 1px black; /* For ease of accessibility, users can tab through the links */
+}
+
+.attribute {
+	font-weight: bold;  /* the font weight decides the weight of the font, for this example it is bold, other examples includes 'bolder', 'light' and 'lighter', numbers may also be used */
+}
+
+article {
+	width: 1000px;
+	padding: 10px;
+	float: left;
+	margin-bottom: 70px;
+}
+
+#pers { /* The personal assessment page is unique as it doesn't have an imageArea, therefore its should have a bigger width */
+	width: 79%
+}
+
+article p {
+	font-size: auto;
+}
+
+article h2 {
+	border: 2px solid black;
+	text-align: center;
+	box-shadow: 0 0 5px black;
+	width: 50%;
+	right: 50%;
+	margin: auto;
+}
+
+article h2 a {
+	display: block;
+	text-decoration: none;
+	color: black;
+}
+
+table {
+	font-size: 15px;
+}
+
+th { 
+	font-weight: normal; /* unbold the table, was originally bold */
+	width: 150px;
+	text-align: left;
+}
+
+.grade { /* separates it from 'article th' selector, otherwise the grade column would also have an unnecessary long 150px width */
+	width: 10px;
+	font-size: 15px;
+}
+
+#leftSide{
+	float: left;
+}
+
+#rightSide{
+	float: left;
+	width: 600px;
+}
+
+.imageArea {
+	width: auto;
+	float: left;
+	margin-bottom: 100px;
+	border-left: 1px solid black;
+}
+
+.imageArea img {
+	margin-left: 10px;
+	margin-top: 10px;
+	box-shadow: 0 0 5px black;
+	border: 1px solid black;
+	display: block; /* block display allows it to be placed like a block, one on top of another */
+}
+
+.imageArea p {
+	margin-left: 10px; /* This is used so it is alligned with the images */
+}
+
+img {
+	box-shadow: 0 0 5px black;
+	border: 1px solid black;
+}
+
+footer {
+	clear: left; /* Clear moves it below the floated elements */
+	bottom: 0;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer p{
+	text-align: center; /* this aligns the text to the center, other values includes left and right */
+}
+
+/* Media Queries, used for responsive design  */
+@media screen and (min-width:1968px) { /* e.g. in this media query, anything greater than 1968px width will style the html with the selectors below. */
+	header {
+		width: 1910px; /* This is so that the image on the banner goes no further than 1910px width, so the image will not be stretched */
+	}
+}
+
+@media screen and (max-width:1905px) { /* I changed the widths of some elements for it to fit the page, also changed the height of the header so the image doesn't get squashed, I did the same with the rest of the media queries */
+	article {
+		width: 800px;
+	}
+	 
+	#pers {
+		width:1300px; /* As the personal assessment page does not contain an imageArea, the width of the article will be different from the other pages */
+	}
+	
+	header {
+		height: 8em;
+
+	}
+	
+}
+
+
+
+@media screen and (max-width:1705px) {
+	article {
+		width: 600px;
+	}
+	
+	#pers {
+		width:1100px;
+	}
+	
+	header {
+		height: 7em;
+
+	}
+	 
+}
+
+
+@media screen and (max-width:1513px) {
+	article {
+		width: 400px;
+	}
+	 
+	#pers {
+		width:900px;
+	}
+	
+	header {
+		height: 6em;
+
+	}
+}
+
+
+@media screen and (max-width:1305px) {
+	article {
+		width: 800px;
+		margin-bottom: 30px;
+	}
+	 
+	.content {
+		display: table; /* This allows it to be displayed similar to a table element. I used this instead of inline because they align each other nicely */
+	}
+
+	#pers {
+		width:700px;
+	}
+
+	.imageArea {
+		border: none; /* Removes the left border, from the initial selector */
+	}
+
+	header {
+		height: 5em;
+	}
+	
+}
+
+@media screen and (max-width:1185px) {
+	article {
+		width: 500px;
+	}
+	
+
+}
+
+@media screen and (max-width:1086px) {
+	#pers {
+		width: 600px; /* This width is change so the both the nav and the article are kept floated left, otherwise if the width is too big, the float value will be ignored and the display will be in block */
+	}
+}
+
+@media screen and (max-width:1000px) {
+	
+	header {
+		margin-bottom: 0;
+	}
+	
+
+	nav {
+		margin-left: auto; /* setting margin to both left and right as auto centre's the element */
+		margin-right: auto;
+		float: none; /* to centre, we must first remove the float from its initial value */
+		width: 100%;
+		border-right: 0; /* Removes the initial thicker border left and right values */
+		border-left: 0;
+		margin-top: 0;
+		margin-bottom: 30px;
+
+	}
+	
+	nav ul {
+		border-left: 0; /* Removes left and right borders as it looks like it's been doubled, as there is already a border from another element(container) */
+		border-right: 0;
+		border-top: 1px solid black;
+		border-bottom: 1px solid black;
+		text-align: center;
+	}
+	
+
+	nav ul li {
+		border-left: 1px solid #2a2a2a;
+		border-right: 1px solid #2a2a2a;
+		padding: 0;
+	}
+	
+	nav ul li ul li{
+		margin-left: 0;
+		border-left: 0;	
+	}
+	
+	#pers {
+	float: none; /* Float removed so it can be centred */
+	margin-left: auto;
+	margin-right: auto;
+	width: 800px;
+	}
+	
+	article {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		width: 800px;
+	}
+	
+	.imageArea {
+		float: none;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: auto;
+	}
+	
+	.content {
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 50px;
+	}
+
+	
+	/* In the initial hover, margin would only make it 0 to the left, so I added the right side to make it look symmetrical */
+	nav ul li ul li:hover{
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	nav ul li:hover {
+		margin-right: 0;
+		margin-left: 0;
+	}
+
+	nav ul li ul:hover {
+		margin-right: 0;
+		margin-left: 0;
+}
+	
+}
+
+

@@ -1,0 +1,164 @@
+<!DOCTYPE html> <!-- Shows that this is a html file type -->
+
+<html lang="en" dir="ltr"> <!-- Opening of the html document -->
+<!-- lang declares the language of the page, for this example it is en for English. dir specifies which direction the text is written, for this it is ltr, left to right -->
+<head> <!-- the <head> tag will include all scipts, styles, javascripts and many more -->
+
+	<meta charset="utf-8"/> <!-- charset sets the characters used for this document, utf-8 includes all possible characters -->
+	<title>June's ePortfolio - About Me</title> <!-- The title is what the page title will be on the browser toolbar -->
+	<link rel="stylesheet" type="text/css" href="home.css"> <!-- Linking the stylesheet -->
+	
+</head>
+
+<body> <!-- this represents the whole page -->
+	
+	<div class="container"> <!-- this is where most/all content will be added -->
+	
+	<header> <!-- This is like the banner, the top of the page -->
+			<img src="images/coffeeBeanLong.jpg" width="1920px" height="142px" alt="Banner Image"> <!-- this is an image tag, which inserts an image into the page, src as the source of the image from the source of the current html file -->
+			<h1>
+			<a href="home.html"> <!-- this gives the text a link -->
+			June Jaictin
+			</a>
+			</h1>
+	</header>
+	
+	<nav> <!-- the nav element is the standard procedure of where navigation links will be added -->
+	  <ul> <!-- This is an opening of an unordered list -->
+	      <li class="currentPage"><a tabindex="1" href="home.html" title="About me">About me</a></li> <!-- currentPage will be a class as it is used for many pages -->
+		  <li class="units"><a id="units">Units</a> <!-- I gave the li a class and the <a> an id, when using active or focus on the sublist, this whole li is affected, so I had to separate them -->
+		  <ul> <!-- This is a list within a list ~ Nested list -->
+			  <li><a tabindex="2" href="info.html" title="Information Systems unit">Information Systems</a></li> <!-- This is a list tag, which adds an item to the list -->
+			  <li><a tabindex="3" href="comp.html" title="Computer System Fundamentals unit">Computer Fundamentals</a></li> 
+			  <li><a tabindex="4" href="web.html" title="Web Design and Development unit">Web Design and Development</a></li>
+			  <li><a tabindex="5" href="prog.html" title="Programming units">Programming</a></li>
+			</ul>
+		  </li>
+		  <li><a tabindex="6" href="pers.html" title="Personal Development Self Assessment">Personal Assessment</a></li>
+	  </ul> <!-- closing the unordered list tag -->
+	</nav>
+	
+	<div class="content">
+	
+		<article> <!-- I will use the <article> element to hold most of the written content. -->
+		
+			<h2><a href="home.html">About me</a></h2>
+			
+			<div id="leftSide"> <!-- use a div to layout two columns of content, giving this an id for the left side, I also used id as it will only be used once -->
+									
+				<br> 
+				<table> <!-- I decided to use a table to represent some information, as it is easier to see and style. -->
+					<tr> <!-- Each <tr> is a row, and each <th> is a column -->
+						<th class="attribute">Name</th> <!-- I use class for attribute and grade, as they'll be used more than once -->
+						<th>June Jaictin</th>
+					</tr>
+					<tr>
+						<th class="attribute">Date of Birth</th>
+						<th>10th of June 1997</th>
+					</tr>
+				</table>
+
+				<br>
+				<h3> Qualifications </h3>
+				<br> <!-- <br> tag adds a new line break -->
+				<h4> GCSE Grades </h4>
+				<table>
+					<tr>
+						<th>Mathematics</th>
+						<th class="grade">A</th> <!-- I gave grades a class, as styling them the same with the subjects with give them too long of a width -->
+					</tr>
+					<tr>
+						<th>ICT</th>
+						<th class="grade">A</th>
+					</tr>
+					<tr>
+						<th>Art and Design</th>
+						<th class="grade">B</th>
+					</tr>
+					
+					<tr>
+						<th>Physics</th>
+						<th class="grade">A</th>
+					</tr>
+					
+					<tr>
+						<th>Biology</th>
+						<th class="grade">B</th>
+					</tr>
+					
+					<tr>
+						<th>Chemistry</th>
+						<th class="grade">B</th>
+					</tr>
+					
+					<tr>
+						<th>Electronics</th>
+						<th class="grade">C</th>
+					</tr>
+					
+					<tr>
+						<th>English Literature</th>
+						<th class="grade">C</th>
+					</tr>
+					
+					<tr>
+						<th>English Language</th>
+						<th class="grade">B</th>
+					</tr>
+					
+				</table>
+				<br>
+				<h4> A-Level Grades </h4>
+				<table>
+					<tr>
+						<th><p>Chemistry</p></th>
+						<th class="grade"><p>C</p></th>
+					</tr>
+					
+					<tr>
+						<th><p>Mathematics</p></th>
+						<th class="grade"><p>B</p></th>
+					</tr>
+				</table>
+			</div>
+			
+			<div id="rightSide">
+			
+				<br>
+				<p>
+				I am creating this ePortfolio for my Introduction to Web Design and Development assignment. Within this ePortfolio, you can find information about me, my units, and my personal development self assessment.
+				</p>
+				<br>
+				<h4>Background</h4>
+				<p>
+				I was born in the Philippines, moved and grew up in England, Manchester when I was 5.
+				I am currently studying Computer Science at Manchester Metropolitan University(MMU).
+				</p>
+				<br>
+				<h4> Personal Goals </h4>
+				<p>Upon graduation, I aspire of becoming either a software engineer or a web developer. I hope to do well in this course to help me look for employment, I also hope I can develop to become a much better, more responsible person.</p>
+
+			</div> 
+			
+		</article>
+
+		
+		<div class="imageArea"> 
+		
+			<img id="me" src="images/blowingBubbles.jpg" width="250px" height="422px" alt="Photo Of Me"> <!-- alt property gives it an alternative(text) if the image is unable to be displayed -->
+			<p>Me, 2016 Summer, blowing bubbles, Philippines.</p>
+		
+		</div>
+		
+	</div>
+	
+	<footer> <!-- footer is where I'll add my contact info -->
+		
+		<p>June Adrianne Jaictin</p>
+		<p>16061201@stu.mmu.ac.uk</p>
+		
+	</footer>
+	
+	</div> <!-- Closing the container div -->
+
+</body>
